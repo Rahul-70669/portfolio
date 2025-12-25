@@ -1,13 +1,14 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
-interface AlertProps extends HTMLAttributes<HTMLDivElement> {
+interface AlertProps {
   variant?: 'info' | 'success' | 'warning' | 'error';
   children: ReactNode;
+  className?: string;
 }
 
-export const Alert = ({ variant = 'info', children, className = '', ...props }: AlertProps) => {
+export const Alert = ({ variant = 'info', children, className = '' }: AlertProps) => {
   return (
-    <div role="alert" className={`alert alert-${variant} ${className}`} {...props}>
+    <div role="alert" className={`alert alert-${variant} ${className}`}>
       {children}
     </div>
   );
