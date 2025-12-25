@@ -4,13 +4,17 @@ import { FormField } from '../../molecules/FormField/FormField';
 import { Input } from '../../atoms/Input/Input';
 import { Textarea } from '../../atoms/Textarea/Textarea';
 import { Button } from '../../atoms/Button/Button';
+import { sendEmail } from '../../../services/emailjs';
 
 export const ContactForm = () => {
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log('Form data:', data);
-    // Implementation for T015/T014 will go here
+    try {
+      await sendEmail(data);
+    } catch (error) {
+      console.error('Submit failed:', error);
+    }
   };
 
   return (
