@@ -1,5 +1,9 @@
 import emailjs from '@emailjs/browser';
-import { ContactFormData } from '../data/contact-form-schema';
+
+// Placeholder interface - to be replaced by actual data model later
+export interface ContactFormData {
+  [key: string]: unknown;
+}
 
 export const sendEmail = async (data: ContactFormData) => {
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -10,13 +14,7 @@ export const sendEmail = async (data: ContactFormData) => {
     throw new Error('EmailJS configuration missing');
   }
 
-  const templateParams = {
-    from_name: data.name,
-    from_email: data.email,
-    subject: data.subject || 'No Subject',
-    message: data.message,
-    to_name: 'Arjun',
-  };
-
-  return emailjs.send(serviceId, templateId, templateParams, publicKey);
+  // Basic implementation wrapper
+  // return emailjs.send(serviceId, templateId, data, publicKey);
+  throw new Error('Not implemented');
 };
