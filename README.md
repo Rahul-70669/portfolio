@@ -71,3 +71,13 @@ export default defineConfig([
   },
 ])
 ```
+
+## Contact Form Configuration
+
+To enable the contact form, create a `.env.local` file in the root directory with the following EmailJS credentials:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```

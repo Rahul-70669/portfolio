@@ -21,10 +21,10 @@ description: "Task list for Contact Form with EmailJS feature implementation"
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Install dependencies (EmailJS, React Hook Form, Yup) via npm
-- [ ] T002 Create environment configuration file `.env.local` with placeholders
-- [ ] T003 Create directory structure for atomic components in `src/components/atoms`, `src/components/molecules`, `src/components/organisms`
-- [ ] T004 Create `src/services/emailjs.ts` service skeleton
+- [x] T001 Install dependencies (EmailJS, React Hook Form, Yup) via npm
+- [x] T002 Create environment configuration file `.env.local` with placeholders
+- [x] T003 Create directory structure for atomic components in `src/components/atoms`, `src/components/molecules`, `src/components/organisms`
+- [x] T004 Create `src/services/emailjs.ts` service skeleton
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
@@ -32,14 +32,14 @@ description: "Task list for Contact Form with EmailJS feature implementation"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Create data model interface `ContactFormData` in `src/data/contact-form-schema.ts`
-- [ ] T006 Implement Yup validation schema `contactFormSchema` in `src/data/contact-form-schema.ts`
-- [ ] T007 [P] Create `Input` atom component in `src/components/atoms/Input/Input.tsx`
-- [ ] T008 [P] Create `Textarea` atom component in `src/components/atoms/Textarea/Textarea.tsx`
-- [ ] T009 [P] Create `Label` atom component in `src/components/atoms/Label/Label.tsx`
-- [ ] T010 [P] Create `Button` atom component in `src/components/atoms/Button/Button.tsx` (if not exists)
-- [ ] T011 [P] Create `Alert` atom component in `src/components/atoms/Alert/Alert.tsx`
-- [ ] T012 Create `FormField` molecule in `src/components/molecules/FormField/FormField.tsx` combining Label, Input/Textarea, and Error display
+- [x] T005 Create data model interface `ContactFormData` in `src/data/contact-form-schema.ts`
+- [x] T006 Implement Yup validation schema `contactFormSchema` in `src/data/contact-form-schema.ts`
+- [x] T007 [P] Create `Input` atom component in `src/components/atoms/Input/Input.tsx`
+- [x] T008 [P] Create `Textarea` atom component in `src/components/atoms/Textarea/Textarea.tsx`
+- [x] T009 [P] Create `Label` atom component in `src/components/atoms/Label/Label.tsx`
+- [x] T010 [P] Create `Button` atom component in `src/components/atoms/Button/Button.tsx` (if not exists)
+- [x] T011 [P] Create `Alert` atom component in `src/components/atoms/Alert/Alert.tsx`
+- [x] T012 Create `FormField` molecule in `src/components/molecules/FormField/FormField.tsx` combining Label, Input/Textarea, and Error display
 
 **Checkpoint**: Foundation ready - user story implementation can now begin
 
@@ -51,12 +51,12 @@ description: "Task list for Contact Form with EmailJS feature implementation"
 
 ### Implementation for User Story 1
 
-- [ ] T013 [US1] Create `ContactForm` organism skeleton in `src/components/organisms/ContactForm/ContactForm.tsx` using `useForm`
-- [ ] T014 [US1] Implement `sendEmail` function in `src/services/emailjs.ts` using `emailjs.send`
-- [ ] T015 [US1] Connect `ContactForm` submit handler to `sendEmail` service
-- [ ] T016 [US1] Implement loading state in `ContactForm` (disable button, show spinner)
-- [ ] T017 [US1] Implement success state handling (show Inline Alert, reset form)
-- [ ] T018 [US1] Add hidden "honeypot" field to `ContactForm` logic (silent return if filled)
+- [x] T013 [US1] Create `ContactForm` organism skeleton in `src/components/organisms/ContactForm/ContactForm.tsx` using `useForm`
+- [x] T014 [US1] Implement `sendEmail` function in `src/services/emailjs.ts` using `emailjs.send`
+- [x] T015 [US1] Connect `ContactForm` submit handler to `sendEmail` service
+- [x] T016 [US1] Implement loading state in `ContactForm` (disable button, show spinner)
+- [x] T017 [US1] Implement success state handling (show Inline Alert, reset form)
+- [x] T018 [US1] Add hidden "honeypot" field to `ContactForm` logic (silent return if filled)
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -68,10 +68,10 @@ description: "Task list for Contact Form with EmailJS feature implementation"
 
 ### Implementation for User Story 2
 
-- [ ] T019 [US2] Integrate `yupResolver` with `useForm` in `src/components/organisms/ContactForm/ContactForm.tsx`
-- [ ] T020 [US2] Connect `FormField` components to `formState.errors` to display validation messages
-- [ ] T021 [US2] Verify specific error messages for Name (required), Email (format), Message (length)
-- [ ] T022 [US2] Add static placeholder text for character limits (e.g., "Max 500 chars") in `Textarea` props
+- [x] T019 [US2] Integrate `yupResolver` with `useForm` in `src/components/organisms/ContactForm/ContactForm.tsx`
+- [x] T020 [US2] Connect `FormField` components to `formState.errors` to display validation messages
+- [x] T021 [US2] Verify specific error messages for Name (required), Email (format), Message (length)
+- [x] T022 [US2] Add static placeholder text for character limits (e.g., "Max 500 chars") in `Textarea` props
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -83,9 +83,9 @@ description: "Task list for Contact Form with EmailJS feature implementation"
 
 ### Implementation for User Story 3
 
-- [ ] T023 [US3] Add try/catch block in `ContactForm` submit handler for API errors
-- [ ] T024 [US3] Implement error state handling (display Error Alert with friendly message)
-- [ ] T025 [US3] Ensure form data is NOT cleared on API error (allow retry)
+- [x] T023 [US3] Add try/catch block in `ContactForm` submit handler for API errors
+- [x] T024 [US3] Implement error state handling (display Error Alert with friendly message)
+- [x] T025 [US3] Ensure form data is NOT cleared on API error (allow retry)
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -93,10 +93,10 @@ description: "Task list for Contact Form with EmailJS feature implementation"
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T026 Add `mailto:` and `tel:` links section below/beside the form
-- [ ] T027 Add Storybook stories for `ContactForm` (Success, Error, Loading states)
-- [ ] T028 Optimize `ContactForm` responsiveness (mobile/desktop layout)
-- [ ] T029 Documentation update in `README.md` regarding EmailJS setup
+- [x] T026 Add `mailto:` and `tel:` links section below/beside the form
+- [x] T027 Add Storybook stories for `ContactForm` (Success, Error, Loading states)
+- [x] T028 Optimize `ContactForm` responsiveness (mobile/desktop layout)
+- [x] T029 Documentation update in `README.md` regarding EmailJS setup
 
 ---
 
