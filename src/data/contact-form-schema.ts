@@ -1,5 +1,4 @@
-import * as yup from 'yup';
-
+// Defines the shape of the contact form data
 export interface ContactFormData {
   name: string;
   email: string;
@@ -22,3 +21,4 @@ export const contactFormSchema = yup.object({
     .min(10, 'Message must be at least 10 characters')
     .max(500, 'Message cannot exceed 500 characters'),
 });
+}
